@@ -40,7 +40,6 @@ class Body extends StatelessWidget {
               flex: 8,
               child: SizedBox(child: FormSignIn()),
             ),
-            const Spacer()
           ],
         ),
       ),
