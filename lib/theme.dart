@@ -20,6 +20,10 @@ TextStyle secondaryTextStyle = GoogleFonts.poppins(
   color: secondaryColorText,
 );
 
+TextStyle tertiaryTextStyle = GoogleFonts.poppins(
+  color: quaternaryColorText,
+);
+
 TextStyle primarybuttonTextStyle = GoogleFonts.poppins(
   color: quaternaryColorText,
 );
