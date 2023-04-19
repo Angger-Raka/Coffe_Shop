@@ -27,7 +27,7 @@ class FormSignUp extends StatelessWidget {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color: Color.fromARGB(255, 207, 206, 206),
+                      color: const Color.fromARGB(255, 207, 206, 206),
                       width: 2,
                     ),
                   ),
@@ -40,7 +40,7 @@ class FormSignUp extends StatelessWidget {
                   },
                   child: CircleAvatar(
                     radius: 55,
-                    backgroundColor: Color.fromARGB(223, 207, 206, 206),
+                    backgroundColor: const Color.fromARGB(223, 207, 206, 206),
                     child: Text(
                       "Add\nPhoto",
                       textAlign: TextAlign.center,

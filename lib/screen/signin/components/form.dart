@@ -1,4 +1,5 @@
 import 'package:coffe_shope/helper/custom_button.dart';
+import 'package:coffe_shope/screen/home/home_screen.dart';
 import 'package:coffe_shope/screen/signup/signup_screen.dart';
 import 'package:coffe_shope/theme.dart';
 import 'package:flutter/material.dart';
@@ -75,7 +76,9 @@ class FormSignIn extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           CustomButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, HomeScreen.routeNamed);
+            },
             text: "Sign In",
             backgroundColor: primaryColorButton,
           ),

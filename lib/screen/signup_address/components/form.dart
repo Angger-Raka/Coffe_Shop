@@ -1,4 +1,5 @@
 import 'package:coffe_shope/helper/custom_button.dart';
+import 'package:coffe_shope/screen/signin/signin_screen.dart';
 import 'package:coffe_shope/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -151,7 +152,7 @@ class FormSignUpAddress extends StatelessWidget {
           const SizedBox(height: 20),
           CustomButton(
             onPressed: () {
-              print("Sign Up");
+              Navigator.pushNamed(context, SignInScreen.routeNamed);
             },
             text: "Sign Up",
             backgroundColor: primaryColorButton,
