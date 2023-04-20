@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'list_category.dart';
+import 'list_item_grid.dart';
 import 'profile.dart';
 
 class Body extends StatelessWidget {
@@ -17,7 +19,19 @@ class Body extends StatelessWidget {
             Container(
               width: MediaQuery.of(context).size.width,
               height: 900,
-              color: Colors.pink,
+              child: Column(
+                children: [
+                  Flexible(
+                    child: Container(
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 10.0, bottom: 10),
+                        child: ListCategory(),
+                      ),
+                    ),
+                  ),
+                  Expanded(flex: 11, child: ListItemGrid()),
+                ],
+              ),
             )
           ],
         ),
