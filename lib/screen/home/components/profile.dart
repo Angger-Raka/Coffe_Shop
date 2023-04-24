@@ -44,7 +44,7 @@ class Profile extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            "Bangkok, Thailand",
+                            "Bantul, Yogyakarta",
                             style: tertiaryTextStyle.copyWith(
                               fontSize: 16,
                             ),
@@ -101,21 +101,31 @@ class Profile extends StatelessWidget {
                       width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.height,
                       decoration: BoxDecoration(
-                        color: Colors.red,
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/Promo.png'),
+                          fit: BoxFit.cover,
+                        ),
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Stack(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 10, top: 10),
+                            padding: const EdgeInsets.only(left: 25, top: 14),
                             child: Container(
                               decoration: BoxDecoration(
-                                color: Colors.green,
+                                color: Colors.red,
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Text("Promo"),
+                                child: Text(
+                                  "Promo",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
                               ),
                             ),
                           )

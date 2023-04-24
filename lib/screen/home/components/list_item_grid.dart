@@ -1,3 +1,4 @@
+import 'package:coffe_shope/screen/detail_item/detail_item_screen.dart';
 import 'package:coffe_shope/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class ListItemGrid extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 300,
-          mainAxisExtent: 270,
+          mainAxisExtent: 300,
           childAspectRatio: 0.7,
         ),
         children: [
@@ -55,8 +56,51 @@ class ItemCard extends StatelessWidget {
           child: Column(
             children: [
               Expanded(
-                child: Container(
-                  color: Colors.amber,
+                child: Stack(
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/Item.png'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    IntrinsicWidth(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.black.withOpacity(0.5),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            bottomRight: Radius.circular(10),
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(4),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.star,
+                                color: Colors.yellow,
+                                size: 14,
+                              ),
+                              Text(
+                                "4.5",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w300,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               ),
               Expanded(
@@ -90,10 +134,13 @@ class ItemCard extends StatelessWidget {
                           SizedBox(
                             width: 40,
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(
+                                    context, DetailItemScreen.routeNamed);
+                              },
                               style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all(Colors.brown),
+                                backgroundColor: MaterialStateProperty.all(
+                                    tertiaryColorText),
                                 shape: MaterialStateProperty.all(
                                     RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(5),

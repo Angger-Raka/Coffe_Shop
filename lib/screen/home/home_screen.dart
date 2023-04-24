@@ -25,9 +25,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Body(),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.brown,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white54,
+        backgroundColor: Colors.white,
+        selectedItemColor: Colors.brown,
+        unselectedItemColor: Colors.grey,
         currentIndex: _selectedIndex,
         onTap: (int index) {
           setState(() {
