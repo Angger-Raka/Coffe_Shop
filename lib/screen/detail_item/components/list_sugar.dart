@@ -45,7 +45,7 @@ class SugarButton extends StatelessWidget {
       padding: const EdgeInsets.only(right: 10),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: isSelected ? primaryColorButton : Colors.white,
+          primary: isSelected ? Color(0xffFFF5EE) : Colors.white,
           shape: RoundedRectangleBorder(
             side: BorderSide(
               color: isSelected ? primaryColorButton : secondaryColorText,
